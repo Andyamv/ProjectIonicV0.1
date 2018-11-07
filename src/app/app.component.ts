@@ -5,6 +5,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { LoginPage } from '../pages/login/login';
+import { ComparteExperienciaPage } from '../pages/comparte-experiencia/comparte-experiencia';
+import { ContactenosPage } from '../pages/contactenos/contactenos';
+import { AyudasLegalesPage } from '../pages/ayudas-legales/ayudas-legales';
+import { LocalizacionPage } from '../pages/localizacion/localizacion';
 
 @Component({
   templateUrl: 'app.html'
@@ -12,7 +17,7 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = LoginPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -22,7 +27,11 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'Casos frecuentes', component: HomePage },
+      { title: 'Comparte tu experiencia', component: ComparteExperienciaPage },
+      { title: 'Tus ayudas legales', component: AyudasLegalesPage },
+      { title: 'Ayuda por localizacion', component: LocalizacionPage },
+      { title: 'Contáctenos', component: ContactenosPage },
     ];
 
   }
